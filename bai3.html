@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Check old</title>
+    <script>
+        function kiemTraTuoi() {
+            var ngaySinh = new Date(document.getElementById("inputNgaySinh").value);
+            var ngayHienTai = new Date();
+            var tuoi18 = new Date(ngayHienTai.getFullYear() - 18, ngayHienTai.getMonth(), ngayHienTai.getDate());
+
+            if (tuoi18 > ngaySinh) {
+                alert("Đủ 18 tuổi. Cho đi xem phim NHÀ BÀ NỮ");
+            } else {
+                alert("Dưới 18 tuổi. Ở nhà xem DORAEMON");
+            }
+        }
+    </script>
+</head>
+<body>
+    <label for="inputNgaySinh">Nhập ngày tháng năm sinh:</label>
+    <input type="date" id="inputNgaySinh">
+    <button onclick="kiemTraTuoi()">Kiểm tra</button>
+</body>
+</html>
