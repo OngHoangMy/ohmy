@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 30px;
+            height: 25px;
+            float: left;
+            border: 1px solid gray;
+            margin-left: 5px;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <script>
+        var rowColors = ['red', 'green'];
+        
+        for (var i = 0; i < 10; i++) {
+            var color = rowColors[i % rowColors.length]; 
+            for (var j = 0; j < 10; j++) {
+                document.write("<div class='box' style='background: " + color + ";'></div>");
+            }
+            document.write("<div style='clear:both'></div>");
+        }
+
+        function nut() {
+            alert("anhtuking!");
+        }
+    </script>
+
+</body>
+
+</html>
